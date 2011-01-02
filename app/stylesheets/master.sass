@@ -2,12 +2,18 @@
 @import "compass/css3/gradient"
 @import "compass/css3/border-radius"
 @import "compass/css3/box-shadow"
+@import "compass/css3/box-shadow"
 
 body
-  margin: 15px 30px
+  margin: 20px 30px
+  background-color: #B22B2B
+
+a
+  color: #3F3159
 
 h1
   font-size: 40px
+  height: 60px
 
 .image-wrapper
   height: 100px
@@ -20,14 +26,15 @@ h1
 
 li.committer
   position: relative
-  border: 1px solid black
-  @include border-radius(6px, 6px)
+  @include border-radius(10px, 10px)
+  +box-shadow(black, 0, 0, 8px)
   margin-bottom: 20px
   margin-right: 20px
   width: 350px
   padding: 15px 20px
   float: left
-  min-height: 400px
+  min-height: 370px
+  background-color: #E5CAAC
 
   li
     list-style-type: disc
@@ -35,7 +42,7 @@ li.committer
     margin-bottom: 3px
 
 dt
-  margin-bottom: 3px
+  margin-bottom: 5px
 
 dd
   margin-bottom: 10px

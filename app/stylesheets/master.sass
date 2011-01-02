@@ -1,10 +1,46 @@
 @import "compass/reset"
+@import "compass/css3/gradient"
+@import "compass/css3/border-radius"
+@import "compass/css3/box-shadow"
+
+body
+  margin: 15px 30px
 
 h1
-  font-size: 30px
+  font-size: 40px
 
 .image-wrapper
   height: 100px
+  position: absolute
+  top: 20px
+  right: 20px
 
   img
     height: 100%
+
+li.committer
+  position: relative
+  border: 1px solid black
+  @include border-radius(6px, 6px)
+  margin-bottom: 20px
+  margin-right: 20px
+  width: 350px
+  padding: 15px 20px
+  float: left
+  min-height: 400px
+
+  li
+    list-style-type: disc
+    margin-left: 20px
+    margin-bottom: 3px
+
+dt
+  margin-bottom: 3px
+
+dd
+  margin-bottom: 10px
+
+h2
+  font-size: 28px
+  margin-bottom: 5px
+

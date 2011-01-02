@@ -1,76 +1,59 @@
-<li>
+<li class="committer">
   <h2><%= account.username %></h2>
-  <table>
+  <dl>
 
     <% unless account.names.empty? %>
-      <tr>
-        <td>Names:</td>
-        <td>
-          <ul>
-            <%= render :partial => 'name', :collection => account.names %>
-          </ul>
-        </td>
-      </tr>
+      <dt>Names:</dt>
+      <dd>
+        <ul>
+          <%= render :partial => 'name', :collection => account.names %>
+        </ul>
+      </dd>
     <% end %>
 
     <% unless account.nicks.empty? %>
-      <tr>
-        <td>Nicknames:</td>
-        <td>
-          <ul>
-            <%= render :partial => 'name', :collection => account.nicks %>
-          </ul>
-        </td>
-      </tr>
+      <dt>Nicknames:</dt>
+      <dd>
+        <ul>
+          <%= render :partial => 'name', :collection => account.nicks %>
+        </ul>
+      </dd>
     <% end %>
 
     <% unless account.sites.empty? %>
-      <tr>
-        <td>Sites:</td>
-        <td>
-          <ul>
-            <%= render :partial => 'site', :collection => account.sites %>
-          </ul>
-        </td>
-      </tr>
+      <dt>Sites:</dt>
+      <dd>
+        <ul>
+          <%= render :partial => 'site', :collection => account.sites %>
+        </ul>
+      </dd>
     <% end %>
 
     <% unless account.services.empty? %>
-      <tr>
-        <td>Services:</td>
-        <td>
-          <ul>
-            <%= render :partial => 'service', :collection => account.services %>
-          </ul>
-        </td>
-      </tr>
+      <dt>Services:</dt>
+      <dd>
+        <ul>
+          <%= render :partial => 'service', :collection => account.services %>
+        </ul>
+      </dd>
     <% end %>
 
     <% unless account.portraits.empty? %>
-      <tr>
-        <td>Portraits:</td>
-        <td>
-          <ul>
-            <%= render :partial => 'portrait', :collection => account.portraits %>
-          </ul>
-        </td>
-      </tr>
+      <%= render :partial => 'portrait', :collection => account.portraits %>
     <% end %>
 
     <!-- FIXME: unsure how to link to ISBN. :-( -->
     <!--
     <% unless account.books.empty? %>
-      <tr>
-        <td>Books:</td>
-        <td>
-          <ul>
-            <% account.books.each do |book| %>
-              <li><%= book.key %></li>
-            <% end %>
-          </ul>
-        </td>
-      </tr>
+      <dt>Books:</dt>
+      <dd>
+        <ul>
+          <% account.books.each do |book| %>
+            <li><%= book.key %></li>
+          <% end %>
+        </ul>
+      </dd>
     <% end %>
     -->
-  </table>
+  </dl>
 </li>
